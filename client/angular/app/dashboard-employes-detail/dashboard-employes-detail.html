@@ -1,0 +1,19 @@
+<div class="well">
+    <br/><br/>
+    <table class="table table-striped table-hover">
+        <thead>
+        <tr>
+            <th>N°</th>
+            <th>Surname</th>
+            <th>Firstname</th>
+            <th>Productivity</th>
+            <th>Action</th>
+        </tr>
+        </thead>
+        <tr ng-repeat="employe in employes | filterByObject: employeId">
+            <td>{{ employe.id }}</td>
+            <td>{{ employe.description }}</td>
+            <td>{{ employe.email }}</td>
+        </tr>
+    </table>
+</div>

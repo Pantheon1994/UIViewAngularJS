@@ -1,0 +1,25 @@
+<div class="well">
+    General productivity = <b>{{prod | limitTo:5  }} %</b>
+    <br/><br/>
+    <table class="table table-striped table-hover">
+        <thead>
+        <tr>
+            <th>N°</th>
+            <th>Surname</th>
+            <th>Firstname</th>
+            <th>Productivity</th>
+            <th>Action</th>
+        </tr>
+        </thead>
+        <tr ng-repeat="employe in employes ">
+            <td>{{ employe.id }}</td>
+            <td>{{ employe.name }}</td>
+            <td>{{ employe.surname }}</td>
+            <td>{{ employe.productivity }} %</td>
+            <td><button ng-click="deleteEmploye(employe.id)" class="btn btn-danger"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+            <td><a class="btn btn-success" href="dashboard/employes/{{employe.id}}">More detail</a></td>
+            </button></td>
+        </tr>
+    </table>
+</div>
+<div ui-view></div>

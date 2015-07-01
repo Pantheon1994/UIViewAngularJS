@@ -1,0 +1,39 @@
+<!-- Fixed navbar -->
+<nav class="navbar navbar-default">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                    aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+        </div>
+        <form class="navbar-form navbar-left" role="search">
+            <button type="submit" ng-click="dashboard.backHistory()" class="btn btn-default">Back</button>
+            <button type="submit" ui-sref="dashboard.employes" class="btn btn-default">View employes</button>
+            <button type="submit" ui-sref="dashboard.tasks" class="btn btn-default">View Tasks</button>
+        </form>
+        <!--/.nav-collapse -->
+    </div>
+</nav>
+<div class="container">
+    <div class="well">
+        <div class="row">
+            <div class="col-md-4">
+                <div ui-view="graph"></div>
+            </div>
+            <div class="col-md-4">
+                <div ui-view="productivity"></div>
+            </div>
+            <div class="col-md-4">
+                <div ui-view="datas"></div>
+            </div>
+
+        </div>
+    </div>
+    <div ui-view></div>
+</div>
+<div ui-view="footer"></div>

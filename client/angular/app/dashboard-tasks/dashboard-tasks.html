@@ -1,0 +1,29 @@
+<h4>Dashboard Tasks</h4>
+<small>If you want, you can add a task</small><br/>
+<br>
+
+<div class="row">
+    <div class="col-md-4">
+        <div class="well">
+            <div class="form-group">
+                <input type="text" ng-model="task.name" class="form-control" placeholder="Name task">
+            </div>
+            <div class="form-group">
+                <textarea type="text" ng-model="task.description" class="form-control" placeholder="description"></textarea>
+            </div>
+            <div class="form-group">
+               <select ng-model="task.priority" class="form-control">
+                   <option ng-model="task.priority">low</option>
+                   <option ng-model="task.priority">middle</option>
+                   <option ng-model="task.priority">high</option>
+               </select>
+            </div>
+            <button ng-click="addTask(task)" class="btn btn-sm btn-danger">Add task</button>
+        </div>
+    </div>
+</div>
+<li><a ui-sref="dashboard.tasks.low">View tasks proprioty : LOW</a></li>
+<li><a ui-sref="dashboard.tasks.middle">View tasks proprioty : MIDDLE</a></li>
+<li><a ui-sref="dashboard.tasks.high">View tasks proprioty : HIGH</a></li>
+<br/>
+<div ui-view></div>

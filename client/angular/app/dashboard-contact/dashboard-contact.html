@@ -1,0 +1,27 @@
+<h4>Dashboard contact</h4>
+<small>If you want, you can add a contact</small><br/>
+<br>
+
+<div class="row">
+    <div class="col-md-4">
+        <div class="well">
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Name">
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="First name">
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Adresse">
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="N° telephone">
+            </div>
+            <button ng-click="addContact()" class="btn btn-sm btn-danger">Add contact</button>
+        </div>
+    </div>
+</div>
+<li><a ui-sref="dashboard.contact.list">View my contact list</a></li>
+<li><a ui-sref="dashboard.contact.detail">View contact detail</a></li>
+<br/>
+<div ui-view></div>
